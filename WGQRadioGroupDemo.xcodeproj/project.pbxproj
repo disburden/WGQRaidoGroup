@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		44AA52D6204047FA00820307 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA52D5204047FA00820307 /* AppDelegate.swift */; };
+		44AA52D8204047FA00820307 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA52D7204047FA00820307 /* ViewController.swift */; };
+		44AA52DB204047FA00820307 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AA52D9204047FA00820307 /* Main.storyboard */; };
+		44AA52DD204047FA00820307 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AA52DC204047FA00820307 /* Assets.xcassets */; };
+		44AA52E0204047FA00820307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AA52DE204047FA00820307 /* LaunchScreen.storyboard */; };
+		44AA52EB204047FA00820307 /* WGQRadioGroupDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA52EA204047FA00820307 /* WGQRadioGroupDemoTests.swift */; };
+		44AA52F6204047FA00820307 /* WGQRadioGroupDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA52F5204047FA00820307 /* WGQRadioGroupDemoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44AA52E7204047FA00820307 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44AA52CA204047F900820307 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44AA52D1204047FA00820307;
+			remoteInfo = WGQRadioGroupDemo;
+		};
+		44AA52F2204047FA00820307 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44AA52CA204047F900820307 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44AA52D1204047FA00820307;
+			remoteInfo = WGQRadioGroupDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		44AA52D2204047FA00820307 /* WGQRadioGroupDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WGQRadioGroupDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44AA52D5204047FA00820307 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44AA52D7204047FA00820307 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		44AA52DA204047FA00820307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		44AA52DC204047FA00820307 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44AA52DF204047FA00820307 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		44AA52E1204047FA00820307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44AA52E6204047FA00820307 /* WGQRadioGroupDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WGQRadioGroupDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44AA52EA204047FA00820307 /* WGQRadioGroupDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGQRadioGroupDemoTests.swift; sourceTree = "<group>"; };
+		44AA52EC204047FA00820307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44AA52F1204047FA00820307 /* WGQRadioGroupDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WGQRadioGroupDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44AA52F5204047FA00820307 /* WGQRadioGroupDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGQRadioGroupDemoUITests.swift; sourceTree = "<group>"; };
+		44AA52F7204047FA00820307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44AA52CF204047FA00820307 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AA52E3204047FA00820307 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AA52EE204047FA00820307 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44AA52C9204047F900820307 = {
+			isa = PBXGroup;
+			children = (
+				44AA52D4204047FA00820307 /* WGQRadioGroupDemo */,
+				44AA52E9204047FA00820307 /* WGQRadioGroupDemoTests */,
+				44AA52F4204047FA00820307 /* WGQRadioGroupDemoUITests */,
+				44AA52D3204047FA00820307 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44AA52D3204047FA00820307 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44AA52D2204047FA00820307 /* WGQRadioGroupDemo.app */,
+				44AA52E6204047FA00820307 /* WGQRadioGroupDemoTests.xctest */,
+				44AA52F1204047FA00820307 /* WGQRadioGroupDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44AA52D4204047FA00820307 /* WGQRadioGroupDemo */ = {
+			isa = PBXGroup;
+			children = (
+				44AA52D5204047FA00820307 /* AppDelegate.swift */,
+				44AA52D7204047FA00820307 /* ViewController.swift */,
+				44AA52D9204047FA00820307 /* Main.storyboard */,
+				44AA52DC204047FA00820307 /* Assets.xcassets */,
+				44AA52DE204047FA00820307 /* LaunchScreen.storyboard */,
+				44AA52E1204047FA00820307 /* Info.plist */,
+			);
+			path = WGQRadioGroupDemo;
+			sourceTree = "<group>";
+		};
+		44AA52E9204047FA00820307 /* WGQRadioGroupDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				44AA52EA204047FA00820307 /* WGQRadioGroupDemoTests.swift */,
+				44AA52EC204047FA00820307 /* Info.plist */,
+			);
+			path = WGQRadioGroupDemoTests;
+			sourceTree = "<group>";
+		};
+		44AA52F4204047FA00820307 /* WGQRadioGroupDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				44AA52F5204047FA00820307 /* WGQRadioGroupDemoUITests.swift */,
+				44AA52F7204047FA00820307 /* Info.plist */,
+			);
+			path = WGQRadioGroupDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44AA52D1204047FA00820307 /* WGQRadioGroupDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44AA52FA204047FA00820307 /* Build configuration list for PBXNativeTarget "WGQRadioGroupDemo" */;
+			buildPhases = (
+				44AA52CE204047FA00820307 /* Sources */,
+				44AA52CF204047FA00820307 /* Frameworks */,
+				44AA52D0204047FA00820307 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WGQRadioGroupDemo;
+			productName = WGQRadioGroupDemo;
+			productReference = 44AA52D2204047FA00820307 /* WGQRadioGroupDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		44AA52E5204047FA00820307 /* WGQRadioGroupDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44AA52FD204047FA00820307 /* Build configuration list for PBXNativeTarget "WGQRadioGroupDemoTests" */;
+			buildPhases = (
+				44AA52E2204047FA00820307 /* Sources */,
+				44AA52E3204047FA00820307 /* Frameworks */,
+				44AA52E4204047FA00820307 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44AA52E8204047FA00820307 /* PBXTargetDependency */,
+			);
+			name = WGQRadioGroupDemoTests;
+			productName = WGQRadioGroupDemoTests;
+			productReference = 44AA52E6204047FA00820307 /* WGQRadioGroupDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		44AA52F0204047FA00820307 /* WGQRadioGroupDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44AA5300204047FA00820307 /* Build configuration list for PBXNativeTarget "WGQRadioGroupDemoUITests" */;
+			buildPhases = (
+				44AA52ED204047FA00820307 /* Sources */,
+				44AA52EE204047FA00820307 /* Frameworks */,
+				44AA52EF204047FA00820307 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44AA52F3204047FA00820307 /* PBXTargetDependency */,
+			);
+			name = WGQRadioGroupDemoUITests;
+			productName = WGQRadioGroupDemoUITests;
+			productReference = 44AA52F1204047FA00820307 /* WGQRadioGroupDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44AA52CA204047F900820307 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = disburden;
+				TargetAttributes = {
+					44AA52D1204047FA00820307 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					44AA52E5204047FA00820307 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 44AA52D1204047FA00820307;
+					};
+					44AA52F0204047FA00820307 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 44AA52D1204047FA00820307;
+					};
+				};
+			};
+			buildConfigurationList = 44AA52CD204047F900820307 /* Build configuration list for PBXProject "WGQRadioGroupDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44AA52C9204047F900820307;
+			productRefGroup = 44AA52D3204047FA00820307 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44AA52D1204047FA00820307 /* WGQRadioGroupDemo */,
+				44AA52E5204047FA00820307 /* WGQRadioGroupDemoTests */,
+				44AA52F0204047FA00820307 /* WGQRadioGroupDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44AA52D0204047FA00820307 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44AA52E0204047FA00820307 /* LaunchScreen.storyboard in Resources */,
+				44AA52DD204047FA00820307 /* Assets.xcassets in Resources */,
+				44AA52DB204047FA00820307 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AA52E4204047FA00820307 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AA52EF204047FA00820307 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44AA52CE204047FA00820307 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44AA52D8204047FA00820307 /* ViewController.swift in Sources */,
+				44AA52D6204047FA00820307 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AA52E2204047FA00820307 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44AA52EB204047FA00820307 /* WGQRadioGroupDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44AA52ED204047FA00820307 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44AA52F6204047FA00820307 /* WGQRadioGroupDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44AA52E8204047FA00820307 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44AA52D1204047FA00820307 /* WGQRadioGroupDemo */;
+			targetProxy = 44AA52E7204047FA00820307 /* PBXContainerItemProxy */;
+		};
+		44AA52F3204047FA00820307 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44AA52D1204047FA00820307 /* WGQRadioGroupDemo */;
+			targetProxy = 44AA52F2204047FA00820307 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		44AA52D9204047FA00820307 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44AA52DA204047FA00820307 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		44AA52DE204047FA00820307 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44AA52DF204047FA00820307 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44AA52F8204047FA00820307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		44AA52F9204047FA00820307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44AA52FB204047FA00820307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WGQRadioGroupDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = name.wgq.WGQRadioGroupDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44AA52FC204047FA00820307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WGQRadioGroupDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = name.wgq.WGQRadioGroupDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		44AA52FE204047FA00820307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WGQRadioGroupDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = name.wgq.WGQRadioGroupDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WGQRadioGroupDemo.app/WGQRadioGroupDemo";
+			};
+			name = Debug;
+		};
+		44AA52FF204047FA00820307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WGQRadioGroupDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = name.wgq.WGQRadioGroupDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WGQRadioGroupDemo.app/WGQRadioGroupDemo";
+			};
+			name = Release;
+		};
+		44AA5301204047FA00820307 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WGQRadioGroupDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = name.wgq.WGQRadioGroupDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WGQRadioGroupDemo;
+			};
+			name = Debug;
+		};
+		44AA5302204047FA00820307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WGQRadioGroupDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = name.wgq.WGQRadioGroupDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WGQRadioGroupDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44AA52CD204047F900820307 /* Build configuration list for PBXProject "WGQRadioGroupDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44AA52F8204047FA00820307 /* Debug */,
+				44AA52F9204047FA00820307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44AA52FA204047FA00820307 /* Build configuration list for PBXNativeTarget "WGQRadioGroupDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44AA52FB204047FA00820307 /* Debug */,
+				44AA52FC204047FA00820307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44AA52FD204047FA00820307 /* Build configuration list for PBXNativeTarget "WGQRadioGroupDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44AA52FE204047FA00820307 /* Debug */,
+				44AA52FF204047FA00820307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44AA5300204047FA00820307 /* Build configuration list for PBXNativeTarget "WGQRadioGroupDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44AA5301204047FA00820307 /* Debug */,
+				44AA5302204047FA00820307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44AA52CA204047F900820307 /* Project object */;
+}
