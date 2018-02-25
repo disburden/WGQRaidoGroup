@@ -39,7 +39,17 @@
         }
         
         //添加布局
-        ...
+        let metrics = ["inputH":CGFloat(inputRadioOptions.count) * baseInfo.itemSize.height,
+                       "inputW":baseInfo.itemSize.width,...]
+ 
+        let bindings = ["inputRadioGroup":inputRadioGroup!,"effectRadioGroup":effectRadioGroup!];  
+        var constraints = [NSLayoutConstraint]();  
+        
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[inputRadioGroup(inputH)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: bindings);
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-42-[inputRadioGroup(inputW)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: bindings);
+        constraints += .....
+                       
+                       
 ```
 
 代理方法  
