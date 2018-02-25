@@ -11,8 +11,6 @@
 
 
 ## Demo 
----
-demo列表
 
 ![demo列表](https://github.com/disburden/WGQRaidoGroup/blob/master/ScreenShots/screenshot1.png?raw=true)
 
