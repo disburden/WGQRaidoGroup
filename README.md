@@ -23,7 +23,7 @@
 
 ## How To Use
 
-<pre><code>
+```swift
         var baseInfo = RadioBaseInfo();
         baseInfo.itemSize = CGSize(width: 91, height: 50);
         baseInfo.normalImage = baseInfo.normalImage.reSizeImage(reSize: CGSize(width: imageSideLength, height: imageSideLength));
@@ -40,10 +40,11 @@
         
         //添加布局
         ...
-</code></pre>
+```
 
-代理方法
-<pre><code>
+代理方法  
+
+```swift
 extension ViewController:WGQRadioGroupProtocol {
     func valueDidChange(radioGroup: WGQRadioGroup, newIndex: Int) {
         if radioGroup == inputRadioGroup {
@@ -55,7 +56,7 @@ extension ViewController:WGQRadioGroupProtocol {
         }
     }
 }
-</code></pre>
+```
 
 
 # Contact me
