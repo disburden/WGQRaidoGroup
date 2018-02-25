@@ -64,6 +64,6 @@ extension ViewController:WGQRadioGroupProtocol {
 
 # License
 
-WRCycleScrollView is available under the MIT license. See the LICENSE file for more info.
+WGQRaidoGroup is available under the MIT license. See the LICENSE file for more info.
 
 
