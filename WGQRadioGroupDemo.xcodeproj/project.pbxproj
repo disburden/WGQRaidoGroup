@@ -14,6 +14,8 @@
 		44AA52E0204047FA00820307 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AA52DE204047FA00820307 /* LaunchScreen.storyboard */; };
 		44AA52EB204047FA00820307 /* WGQRadioGroupDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA52EA204047FA00820307 /* WGQRadioGroupDemoTests.swift */; };
 		44AA52F6204047FA00820307 /* WGQRadioGroupDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA52F5204047FA00820307 /* WGQRadioGroupDemoUITests.swift */; };
+		44AF0C142041456800657DC2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF0C122041456800657DC2 /* Config.swift */; };
+		44AF0C152041456800657DC2 /* WGQRadioGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF0C132041456800657DC2 /* WGQRadioGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		44AA52F1204047FA00820307 /* WGQRadioGroupDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WGQRadioGroupDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44AA52F5204047FA00820307 /* WGQRadioGroupDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGQRadioGroupDemoUITests.swift; sourceTree = "<group>"; };
 		44AA52F7204047FA00820307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44AF0C122041456800657DC2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		44AF0C132041456800657DC2 /* WGQRadioGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WGQRadioGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		44AA52C9204047F900820307 = {
 			isa = PBXGroup;
 			children = (
+				44AF0C112041456800657DC2 /* WGQRadioGroup */,
 				44AA52D4204047FA00820307 /* WGQRadioGroupDemo */,
 				44AA52E9204047FA00820307 /* WGQRadioGroupDemoTests */,
 				44AA52F4204047FA00820307 /* WGQRadioGroupDemoUITests */,
@@ -123,6 +128,15 @@
 				44AA52F7204047FA00820307 /* Info.plist */,
 			);
 			path = WGQRadioGroupDemoUITests;
+			sourceTree = "<group>";
+		};
+		44AF0C112041456800657DC2 /* WGQRadioGroup */ = {
+			isa = PBXGroup;
+			children = (
+				44AF0C122041456800657DC2 /* Config.swift */,
+				44AF0C132041456800657DC2 /* WGQRadioGroup.swift */,
+			);
+			path = WGQRadioGroup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +274,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				44AA52D8204047FA00820307 /* ViewController.swift in Sources */,
+				44AF0C152041456800657DC2 /* WGQRadioGroup.swift in Sources */,
 				44AA52D6204047FA00820307 /* AppDelegate.swift in Sources */,
+				44AF0C142041456800657DC2 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
