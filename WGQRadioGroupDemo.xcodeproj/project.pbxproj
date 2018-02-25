@@ -16,6 +16,7 @@
 		44AA52F6204047FA00820307 /* WGQRadioGroupDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AA52F5204047FA00820307 /* WGQRadioGroupDemoUITests.swift */; };
 		44AF0C142041456800657DC2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF0C122041456800657DC2 /* Config.swift */; };
 		44AF0C152041456800657DC2 /* WGQRadioGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44AF0C132041456800657DC2 /* WGQRadioGroup.swift */; };
+		44AF0C182042C7B700657DC2 /* screenshot1.png in Resources */ = {isa = PBXBuildFile; fileRef = 44AF0C172042C7B600657DC2 /* screenshot1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		44AA52F7204047FA00820307 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44AF0C122041456800657DC2 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		44AF0C132041456800657DC2 /* WGQRadioGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WGQRadioGroup.swift; sourceTree = "<group>"; };
+		44AF0C172042C7B600657DC2 /* screenshot1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		44AA52C9204047F900820307 = {
 			isa = PBXGroup;
 			children = (
+				44AF0C162042C77200657DC2 /* ScreenShots */,
 				44AF0C112041456800657DC2 /* WGQRadioGroup */,
 				44AA52D4204047FA00820307 /* WGQRadioGroupDemo */,
 				44AA52E9204047FA00820307 /* WGQRadioGroupDemoTests */,
@@ -137,6 +140,14 @@
 				44AF0C132041456800657DC2 /* WGQRadioGroup.swift */,
 			);
 			path = WGQRadioGroup;
+			sourceTree = "<group>";
+		};
+		44AF0C162042C77200657DC2 /* ScreenShots */ = {
+			isa = PBXGroup;
+			children = (
+				44AF0C172042C7B600657DC2 /* screenshot1.png */,
+			);
+			path = ScreenShots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44AA52E0204047FA00820307 /* LaunchScreen.storyboard in Resources */,
+				44AF0C182042C7B700657DC2 /* screenshot1.png in Resources */,
 				44AA52DD204047FA00820307 /* Assets.xcassets in Resources */,
 				44AA52DB204047FA00820307 /* Main.storyboard in Resources */,
 			);
