@@ -9,7 +9,7 @@
 import UIKit
 
 struct RadioBaseInfo {
-    var itemSize:CGSize = CGSize(width: 50, height: 50)
+    var itemSize:CGSize = CGSize(width: 1, height: 1)
     var itemTitleFont = UIFont.systemFont(ofSize: 14)
     var itemTitle = "";
     var itemTitleNormalColor = UIColor.init(red: 99/255, green: 99/255, blue: 99/255, alpha: 1)
@@ -27,6 +27,7 @@ struct RadioBaseInfo {
 }
 
 fileprivate var baseInfo:RadioBaseInfo?;
+
 
 /// UICollectionCell 类
 class RadioItem: UICollectionViewCell {
@@ -87,6 +88,7 @@ protocol WGQRadioGroupProtocol {
 class WGQRadioGroup: UIView {
 
     let collection:UICollectionView;
+    let columnCount:Int;
     private let options:[String]
     var delegate:WGQRadioGroupProtocol?
     
@@ -111,10 +113,12 @@ class WGQRadioGroup: UIView {
     
     init(baseInfomation:RadioBaseInfo,
          options:[String],
+         columnCount:Int,
          delegate:WGQRadioGroupProtocol) {
 
         self.delegate = delegate;
         self.options = options;
+        self.columnCount = columnCount;
         baseInfo = baseInfomation;
         layout.itemSize = baseInfo!.itemSize;
         
@@ -125,8 +129,13 @@ class WGQRadioGroup: UIView {
         
     }
     
+
+    
     private func setupViews()
     {
+//        collection.layer.borderColor = UIColor.orange.cgColor;
+//        collection.layer.borderWidth = 0.5;
+//        collection.layer.cornerRadius = 4;
         addSubview(collection);
         
         collection.translatesAutoresizingMaskIntoConstraints = false;
@@ -137,11 +146,14 @@ class WGQRadioGroup: UIView {
         constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bandings);
         self.addConstraints(constraints);
         
+        
+    
         collection.backgroundColor = UIColor.clear
         collection.register(RadioItem.self, forCellWithReuseIdentifier: itemIdentifier);
         collection.delegate = self;
         collection.dataSource = self;
         
+
     }
 }
 
@@ -153,6 +165,8 @@ extension WGQRadioGroup:UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.options.count;
     }
+    
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item:RadioItem = collectionView.dequeueReusableCell(withReuseIdentifier: itemIdentifier, for: indexPath) as! RadioItem;
@@ -167,5 +181,14 @@ extension WGQRadioGroup:UICollectionViewDelegate,UICollectionViewDataSource {
         self.delegate?.valueDidChange(radioGroup: self ,newIndex: self.selectIndex);
     }
 }
+
+extension WGQRadioGroup:UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let rowCount = ceil(Double(self.options.count / self.columnCount))
+        return CGSize(width: collectionView.frame.size.width / CGFloat(self.columnCount),
+                          height: collectionView.frame.size.height / CGFloat(rowCount));
+    }
+}
+
 
 

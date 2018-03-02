@@ -50,13 +50,12 @@ class ViewController: UIViewController {
         //初始化一些参数
         let imageSideLength = 23;
         var baseInfo = RadioBaseInfo();
-        baseInfo.itemSize = CGSize(width: 91, height: 50);
         baseInfo.normalImage = baseInfo.normalImage.reSizeImage(reSize: CGSize(width: imageSideLength, height: imageSideLength));
         baseInfo.selectImage = baseInfo.selectImage.reSizeImage(reSize: CGSize(width: imageSideLength, height: imageSideLength));
         
         //添加音乐输入模式单选组
         let inputRadioOptions = ["VOD","BGM","OPT"];
-        inputRadioGroup = WGQRadioGroup(baseInfomation: baseInfo, options: inputRadioOptions, delegate: self);
+        inputRadioGroup = WGQRadioGroup(baseInfomation: baseInfo, options: inputRadioOptions,columnCount:1, delegate: self);
         if let radioGroup = inputRadioGroup
         {
             self.view.addSubview(radioGroup);
@@ -66,7 +65,7 @@ class ViewController: UIViewController {
         //添加效果模式单选组
         //如果需要不同的选项样式可以重新创建一个BaseInfo
         let effectRadioOptions = ["唱将","通俗","美声","专业"];
-        effectRadioGroup = WGQRadioGroup(baseInfomation: baseInfo, options: effectRadioOptions, delegate: self);
+        effectRadioGroup = WGQRadioGroup(baseInfomation: baseInfo, options: effectRadioOptions,columnCount:2, delegate: self);
         if let radioGroup = effectRadioGroup
         {
             self.view.addSubview(radioGroup);
@@ -76,10 +75,10 @@ class ViewController: UIViewController {
         //约束布局
         let bindings = ["inputRadioGroup":inputRadioGroup!,"effectRadioGroup":effectRadioGroup!];
         var constraints = [NSLayoutConstraint]();
-        let metrics = ["inputH":CGFloat(inputRadioOptions.count) * baseInfo.itemSize.height,
-                       "inputW":baseInfo.itemSize.width,
-                       "effectH":baseInfo.itemSize.height*2,
-                       "effectW":baseInfo.itemSize.width*2]
+        let metrics = ["inputH":150,
+                       "inputW":91,
+                       "effectH":100,
+                       "effectW":182]
         constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[inputRadioGroup(inputH)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: bindings);
         constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-42-[inputRadioGroup(inputW)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: bindings);
         constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-100-[effectRadioGroup(effectH)]", options: NSLayoutFormatOptions(rawValue: 1), metrics: metrics, views: bindings);
