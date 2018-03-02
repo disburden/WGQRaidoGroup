@@ -25,13 +25,12 @@
 
 ```swift
         var baseInfo = RadioBaseInfo();
-        baseInfo.itemSize = CGSize(width: 91, height: 50);
         baseInfo.normalImage = baseInfo.normalImage.reSizeImage(reSize: CGSize(width: imageSideLength, height: imageSideLength));
         baseInfo.selectImage = baseInfo.selectImage.reSizeImage(reSize: CGSize(width: imageSideLength, height: imageSideLength));
         
         //添加音乐输入模式单选组
         let inputRadioOptions = ["VOD","BGM","OPT"];
-        inputRadioGroup = WGQRadioGroup(baseInfomation: baseInfo, options: inputRadioOptions, delegate: self);
+        inputRadioGroup = WGQRadioGroup(baseInfomation: baseInfo, options: inputRadioOptions,columnCount:1, delegate: self);
         if let radioGroup = inputRadioGroup
         {
             self.view.addSubview(radioGroup);
@@ -39,8 +38,9 @@
         }
         
         //添加布局
-        let metrics = ["inputH":CGFloat(inputRadioOptions.count) * baseInfo.itemSize.height,
-                       "inputW":baseInfo.itemSize.width,...]
+        let metrics = ["inputH":150,
+                       "inputW":91,
+                       ...]
  
         let bindings = ["inputRadioGroup":inputRadioGroup!,"effectRadioGroup":effectRadioGroup!];  
         var constraints = [NSLayoutConstraint]();  
