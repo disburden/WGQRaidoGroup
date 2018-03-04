@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     func initParameters() {
         self.view.translatesAutoresizingMaskIntoConstraints = false;
         view.backgroundColor = UIColor.init(red: 39/255, green: 40/255, blue: 42/255, alpha: 1);
+
     }
     
     func setupViews() {
@@ -52,6 +53,10 @@ class ViewController: UIViewController {
         var baseInfo = RadioBaseInfo();
         baseInfo.normalImage = baseInfo.normalImage.reSizeImage(reSize: CGSize(width: imageSideLength, height: imageSideLength));
         baseInfo.selectImage = baseInfo.selectImage.reSizeImage(reSize: CGSize(width: imageSideLength, height: imageSideLength));
+        baseInfo.groupTitle = "输入"
+        baseInfo.groupTitleBackColor = self.view.backgroundColor!;
+        baseInfo.groupTitleCenterX = true;
+        
         
         //添加音乐输入模式单选组
         let inputRadioOptions = ["VOD","BGM","OPT"];
@@ -64,8 +69,14 @@ class ViewController: UIViewController {
         
         //添加效果模式单选组
         //如果需要不同的选项样式可以重新创建一个BaseInfo
+        var baseInfo2 = RadioBaseInfo();
+        baseInfo2.normalImage = baseInfo.normalImage.reSizeImage(reSize: CGSize(width: imageSideLength, height: imageSideLength));
+        baseInfo2.selectImage = baseInfo.selectImage.reSizeImage(reSize: CGSize(width: imageSideLength, height: imageSideLength));
+        baseInfo2.groupTitle = "效果模式"
+        baseInfo2.groupTitleBackColor = self.view.backgroundColor!;
+        baseInfo2.groupTitleLeftGap = 8;
         let effectRadioOptions = ["唱将","通俗","美声","专业"];
-        effectRadioGroup = WGQRadioGroup(baseInfomation: baseInfo, options: effectRadioOptions,columnCount:2, delegate: self);
+        effectRadioGroup = WGQRadioGroup(baseInfomation: baseInfo2, options: effectRadioOptions,columnCount:2, delegate: self);
         if let radioGroup = effectRadioGroup
         {
             self.view.addSubview(radioGroup);

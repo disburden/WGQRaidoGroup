@@ -9,6 +9,22 @@
 import UIKit
 
 struct RadioBaseInfo {
+
+    var groupTitle:String = "";
+    var groupTitleFont:UIFont = UIFont.systemFont(ofSize: 17);
+    
+
+    //TODO: 还没完善,暂时需要设置一下标题背景色,与你的主背景色一样就行了
+    var groupTitleBackColor:UIColor = UIColor.init(red: 39/255, green: 40/255, blue: 42/255, alpha: 1);
+    
+    var groupTitleTextColor:UIColor = UIColor.init(red: 89/255, green: 136/255, blue: 160/255, alpha: 1);
+    var groupTitleLeftGap:CGFloat = 4;
+    var groupTitleCenterX:Bool = false;
+    
+    var borderColor:UIColor = UIColor.init(red: 89/255, green: 136/255, blue: 160/255, alpha: 1);
+    var borderWidth:CGFloat = 0.5;
+    var cornerRadius:CGFloat = 4;
+    
     var itemSize:CGSize = CGSize(width: 1, height: 1)
     var itemTitleFont = UIFont.systemFont(ofSize: 14)
     var itemTitle = "";
@@ -87,12 +103,16 @@ protocol WGQRadioGroupProtocol {
 
 class WGQRadioGroup: UIView {
 
-    let collection:UICollectionView;
-    let columnCount:Int;
+    private let  collection:UICollectionView;
+    private let  columnCount:Int;
     private let options:[String]
+    private let itemIdentifier = "radioItem";
+    private let titleLabel:UILabel = UILabel();
+    private let container:UIView = UIView();
+    private var labelSize:CGSize = CGSize.zero;
     var delegate:WGQRadioGroupProtocol?
     
-    private let itemIdentifier = "radioItem";
+    
     
     private let layout:UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout();
@@ -133,21 +153,63 @@ class WGQRadioGroup: UIView {
     
     private func setupViews()
     {
-//        collection.layer.borderColor = UIColor.orange.cgColor;
-//        collection.layer.borderWidth = 0.5;
-//        collection.layer.cornerRadius = 4;
-        addSubview(collection);
+//        self.backgroundColor = UIColor.cyan;
+        self.translatesAutoresizingMaskIntoConstraints = false;
+        container.translatesAutoresizingMaskIntoConstraints = false;
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false;
         
+        var collectionViewTop:CGFloat = 0.0;
+        if baseInfo?.groupTitle.isEmpty == false {
+            //先计算出label的尺寸
+            titleLabel.font = baseInfo?.groupTitleFont;
+            titleLabel.text = baseInfo?.groupTitle;
+            titleLabel.textColor = baseInfo?.groupTitleTextColor;
+            labelSize = titleLabel.sizeThatFits(CGSize.zero);
+            print(labelSize);
+            titleLabel.backgroundColor = baseInfo?.groupTitleBackColor;
+            
+            
+            collectionViewTop = labelSize.height;
+            //添加容器
+            addSubview(container);
+            addSubview(titleLabel);
+            
+            container.layer.borderColor = baseInfo?.borderColor.cgColor;
+            container.layer.borderWidth = (baseInfo?.borderWidth)!;
+            container.layer.cornerRadius = (baseInfo?.cornerRadius)!;
+            let bandings = ["container":container,"titleLabel":titleLabel,"self":self];
+            let metrics = ["top":(labelSize.height / 2.0),
+                           "labelW":labelSize.width,
+                           "labelH":labelSize.height,
+                           "leftGap":baseInfo!.groupTitleLeftGap];
+            var constraints = [NSLayoutConstraint]();
+            constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-top-[container]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: bandings);
+            constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[container]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: bandings);
+            constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|[titleLabel(labelH)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: bandings);
+            if (baseInfo?.groupTitleCenterX)! {
+                let constraintCenterX = NSLayoutConstraint.init(item: titleLabel, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0.0);
+                self.addConstraint(constraintCenterX);
+            } else
+            {
+                constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-leftGap-[titleLabel(labelW)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: bandings);
+            }
+            self.addConstraints(constraints);
+            
+            
+        } else {
+            print("no titile")
+        }
+        
+        
+        addSubview(collection);
         collection.translatesAutoresizingMaskIntoConstraints = false;
         self.translatesAutoresizingMaskIntoConstraints = false;
         let bandings = ["view":collection];
+        let metrics = ["top":collectionViewTop];
         var constraints = [NSLayoutConstraint]();
-        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bandings);
+        constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-top-[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: metrics, views: bandings);
         constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: bandings);
         self.addConstraints(constraints);
-        
-        
-    
         collection.backgroundColor = UIColor.clear
         collection.register(RadioItem.self, forCellWithReuseIdentifier: itemIdentifier);
         collection.delegate = self;
