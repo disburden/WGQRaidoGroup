@@ -9,14 +9,11 @@
 import UIKit
 
 struct RadioBaseInfo {
-
-    var groupTitle:String = "";
+    var backgroundColor:UIColor = UIColor.init(red: 39/255, green: 40/255, blue: 42/255, alpha: 1);
+    
+    var groupTitle:String? = "";
     var groupTitleFont:UIFont = UIFont.systemFont(ofSize: 17);
-    
 
-    //TODO: 还没完善,暂时需要设置一下标题背景色,与你的主背景色一样就行了
-    var groupTitleBackColor:UIColor = UIColor.init(red: 39/255, green: 40/255, blue: 42/255, alpha: 1);
-    
     var groupTitleTextColor:UIColor = UIColor.init(red: 89/255, green: 136/255, blue: 160/255, alpha: 1);
     var groupTitleLeftGap:CGFloat = 4;
     var groupTitleCenterX:Bool = false;
@@ -153,25 +150,27 @@ class WGQRadioGroup: UIView {
     
     private func setupViews()
     {
-//        self.backgroundColor = UIColor.cyan;
+        self.backgroundColor = baseInfo?.backgroundColor;
         self.translatesAutoresizingMaskIntoConstraints = false;
         container.translatesAutoresizingMaskIntoConstraints = false;
         titleLabel.translatesAutoresizingMaskIntoConstraints = false;
         
         var collectionViewTop:CGFloat = 0.0;
-        if baseInfo?.groupTitle.isEmpty == false {
+        if (baseInfo?.groupTitle?.isEmpty == false) ||
+            (baseInfo?.groupTitle == ""){
             //先计算出label的尺寸
             titleLabel.font = baseInfo?.groupTitleFont;
             titleLabel.text = baseInfo?.groupTitle;
             titleLabel.textColor = baseInfo?.groupTitleTextColor;
             labelSize = titleLabel.sizeThatFits(CGSize.zero);
             print(labelSize);
-            titleLabel.backgroundColor = baseInfo?.groupTitleBackColor;
+            titleLabel.backgroundColor = baseInfo?.backgroundColor;
             
             
             collectionViewTop = labelSize.height;
             //添加容器
             addSubview(container);
+            container.backgroundColor = baseInfo?.backgroundColor
             addSubview(titleLabel);
             
             container.layer.borderColor = baseInfo?.borderColor.cgColor;

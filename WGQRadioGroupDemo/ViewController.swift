@@ -43,7 +43,6 @@ class ViewController: UIViewController {
     func initParameters() {
         self.view.translatesAutoresizingMaskIntoConstraints = false;
         view.backgroundColor = UIColor.init(red: 39/255, green: 40/255, blue: 42/255, alpha: 1);
-
     }
     
     func setupViews() {
@@ -51,11 +50,14 @@ class ViewController: UIViewController {
         //初始化一些参数
         let imageSideLength = 23;
         var baseInfo = RadioBaseInfo();
+        baseInfo.backgroundColor = self.view.backgroundColor!; //建议设置为与主背景色一致
         baseInfo.normalImage = baseInfo.normalImage.reSizeImage(reSize: CGSize(width: imageSideLength, height: imageSideLength));
         baseInfo.selectImage = baseInfo.selectImage.reSizeImage(reSize: CGSize(width: imageSideLength, height: imageSideLength));
         baseInfo.groupTitle = "输入"
-        baseInfo.groupTitleBackColor = self.view.backgroundColor!;
         baseInfo.groupTitleCenterX = true;
+        baseInfo.groupTitleTextColor = UIColor.orange;
+        baseInfo.borderColor = UIColor.orange;
+        baseInfo.borderWidth = 2;
         
         
         //添加音乐输入模式单选组
@@ -70,10 +72,10 @@ class ViewController: UIViewController {
         //添加效果模式单选组
         //如果需要不同的选项样式可以重新创建一个BaseInfo
         var baseInfo2 = RadioBaseInfo();
+        baseInfo2.backgroundColor = self.view.backgroundColor!;
         baseInfo2.normalImage = baseInfo.normalImage.reSizeImage(reSize: CGSize(width: imageSideLength, height: imageSideLength));
         baseInfo2.selectImage = baseInfo.selectImage.reSizeImage(reSize: CGSize(width: imageSideLength, height: imageSideLength));
         baseInfo2.groupTitle = "效果模式"
-        baseInfo2.groupTitleBackColor = self.view.backgroundColor!;
         baseInfo2.groupTitleLeftGap = 8;
         let effectRadioOptions = ["唱将","通俗","美声","专业"];
         effectRadioGroup = WGQRadioGroup(baseInfomation: baseInfo2, options: effectRadioOptions,columnCount:2, delegate: self);
