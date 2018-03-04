@@ -69,7 +69,7 @@ extension ViewController:WGQRadioGroupProtocol {
 ```
   
 # 下一步  
-实现边框和分组标题
+实现分组标题不用设置背景色,想办法将边框(border)与标题重叠的那一段隐去
 
 # Contact me
 - Email:  disburden@gmail.com
