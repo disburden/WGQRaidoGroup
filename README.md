@@ -17,8 +17,12 @@
 
 ## Installation 
 
-> **手动拖入**
-> 将 WGQRaidoGroup 文件夹拽入项目中即可使用
+#### CocoaPods
+use_frameworks! 
+pod 'WGQRaidoGroup'
+
+#### 手动拖入
+将 WGQRaidoGroup 文件夹拽入项目中即可使用
 
 ## How To Use
 
@@ -67,7 +71,7 @@ extension ViewController:WGQRadioGroupProtocol {
 }
 ```
   
-# 下一步  
+# Next  
 约束按钮的image为正方形
 
 # Contact me
@@ -76,6 +80,6 @@ extension ViewController:WGQRadioGroupProtocol {
 
 # License
 
-WGQRaidoGroup is available under the MIT license. See the LICENSE file for more info.
+WGQRaidoGroup is available under the MIT license. See the [LICENSE](https://github.com/disburden/WGQRaidoGroup/blob/master/LICENSE) for more info.
 
 
