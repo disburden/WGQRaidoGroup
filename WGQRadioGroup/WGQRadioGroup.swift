@@ -95,6 +95,7 @@ class RadioItem: UICollectionViewCell {
 
 /// WGQRadioGroup 主类
 protocol WGQRadioGroupProtocol {
+    func valueShouldChange(radioGroup:WGQRadioGroup, newIndex:Int) -> Bool;
     func valueDidChange(radioGroup:WGQRadioGroup, newIndex:Int);
 }
 
@@ -228,13 +229,19 @@ extension WGQRadioGroup:UICollectionViewDelegate,UICollectionViewDataSource {
     }
     
 
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item:RadioItem = collectionView.dequeueReusableCell(withReuseIdentifier: itemIdentifier, for: indexPath) as! RadioItem;
         item.optionTitle = self.options[indexPath.row];
         item.isSelected = indexPath.row == self.selectIndex;
         item.btn.isSelected = item.isSelected;
         return item;
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if let delegate = self.delegate{
+            return (delegate.valueShouldChange(radioGroup: self, newIndex: indexPath.row));
+        }
+        return true;
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

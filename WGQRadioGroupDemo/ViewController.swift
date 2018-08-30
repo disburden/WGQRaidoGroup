@@ -121,6 +121,11 @@ extension UIImage {
 }
 
 extension ViewController:WGQRadioGroupProtocol {
+    
+    func valueShouldChange(radioGroup: WGQRadioGroup, newIndex: Int) -> Bool {
+        return true;
+    }
+    
     func valueDidChange(radioGroup: WGQRadioGroup, newIndex: Int) {
         if radioGroup == inputRadioGroup {
             print("更换音乐输入模式为:\(newIndex)")
